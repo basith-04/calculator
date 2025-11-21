@@ -1,19 +1,36 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
 public class Main {
-    public static void main(String[] args) {
-<<<<<<< HEAD
 
-=======
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+    public static int main(String[] args) {
+            while(true)
+            {
+                System.out.println("Please select an operation ");
+                System.out.println("1.Addition \n 2. Substraction \n 3. Division \n 4. Multiplication 5. Exit");
+                System.out.println("choose (1 -5 ) ");
+                Scanner sc=new Scanner(System.in);
+                int choice =sc.nextInt();
+                System.out.println("enter the first number :");
+                double num1=sc.nextDouble();
+                System.out.println("enter the second number :");
+                double num2=sc.nextDouble();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
->>>>>>> ce75c49e04834c23d4eda757b38f40b704c609ad
+                switch(choice)
+                {
+                    case 1: System.out.println(num1+num2);
+                        break;
+                    case 2: System.out.println(num1-num2);
+                        break;
+                    case 3: try{
+                        System.out.println(num1/num2);
+                    }catch (ArithmeticException e){
+                        System.out.println("cant divide with zero");
+                    }break;
+                    case 4: System.out.println(num1*num2);
+                        break;
+                    case 5: return 0;
+                    default:System.out.println("enter a valid option from 1 to 5");
+                }
+            }
+
         }
     }
-}
